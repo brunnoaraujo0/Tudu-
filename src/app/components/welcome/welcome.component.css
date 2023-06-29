@@ -1,0 +1,22 @@
+.welcome {
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+}
+.welcome h1 {
+    font-weight: bold;
+    color: #1A55B4;
+    font-size: 2.7rem;
+    margin-bottom: 60px;
+}
+.welcome h4 {
+    margin-top: 40px;
+    font-size: 1rem;
+    color: #757575;
+}
+.provisorio {
+    position: absolute;
+    top: 90vh;
+    transition: all ease .3s;
+    
+}
