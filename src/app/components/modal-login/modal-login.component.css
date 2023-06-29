@@ -1,8 +1,121 @@
 .modalogin {
     width: 100vw;
-    height: 90vh;
-    background-color: #e9e9e9;
+    height: 80vh;
+    background-color: #efeded;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
+    position: absolute;
+    top: 90vh;
+    transition: all ease 0.3s;
+}
+.font {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #1A55B4;
 
 }
+
+
+
+main {
+    height: 100%;
+  }
+  h1 {
+    padding: 5%;
+  
+    font-weight: 700;
+    color: #1A55B4;
+  }
+  div {
+    padding: 3% 5% 3% 5%;
+  }
+  .without-border {
+    border: none;
+    outline: none;
+  
+    background-color: var(--ion-color-light) !important;
+  }
+  .mb-3 {
+    outline: none;
+  }
+
+  #buttons .w-100 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .btn-style {
+    font-size: 14px;
+    border-radius: 8px;
+    padding: 8px;
+  
+    border: none;
+    outline: none;
+    transition: all 0.25s ease;
+  }
+  .form-field {
+    position: relative;
+    padding: 0 !important;
+  }
+  .form-field,
+  input:focus {
+    box-shadow: 0;
+    outline: 0;
+    
+  }
+  .form-field .underline::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    margin-left: 7.5%;
+    width: 80%;
+    bottom: 20px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  .form-field .underline::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    margin-left: 7.5%;
+    width: 80%;
+    bottom: 20px;
+    left: 0;
+    background: #1A55B4;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+    transform-origin: left;
+  }
+  
+  .form-field input:focus ~ .underline::after {
+    transform: scaleX(1);
+  }
+  
+  .form-field input:focus ~ .underline::after {
+    transform: scaleX(1);
+  }
+  
+  input {
+    position: relative;
+  }
+  
+  i-feather {
+    position: absolute;
+    cursor: pointer;
+  }
+  
+  .btn-style:hover {
+    letter-spacing: 0.8px;
+  }
+  .btn-shadow {
+    -webkit-box-shadow: 0px 0px 22px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 22px 5px rgba(0, 0, 0, 0.1);
+    transition: all ease-in-out 0.25s;
+  }
+  
+  .btn-shadow:hover {
+    -webkit-box-shadow: 0px 0px 22px 5px rgba(0, 0, 0, 0);
+    box-shadow: 0px 0px 22px 5px rgba(0, 0, 0, 0);
+  }

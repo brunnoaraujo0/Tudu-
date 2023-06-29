@@ -8,6 +8,7 @@ import '@angular/localize/init';
 
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { ModalLoginComponent } from './components/modal-login/modal-login.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ModalLoginComponent } from './components/modal-login/modal-login.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

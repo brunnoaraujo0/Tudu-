@@ -7,11 +7,5 @@ import { Component } from '@angular/core';
 })
 export class WelcomeComponent {
 
-  sobe: boolean = false;
-
-  login() { 
-    this.sobe = !this.sobe;
-    console.log(this.sobe)
-  }
 
 }

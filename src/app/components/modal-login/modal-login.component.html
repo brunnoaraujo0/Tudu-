@@ -1,2 +1,59 @@
-<div class="modalogin">
+<div class="modalogin"  [ngStyle]="{'top': (sobe ? '20vh' : '90vh')}">
+    <div class="row" (click)="login()" >
+        <fa-icon *ngIf="!sobe" class="col-12 d-flex justify-content-center font" [icon]="faArrowUp"></fa-icon>
+        <fa-icon *ngIf="sobe" class="col-12 d-flex justify-content-center font" [icon]="faGripLines"></fa-icon>
+    </div>
+
+    <main>
+        <h1>Entrar</h1>
+        <div>
+          <div id="e-mail" class="form-field">
+            <input
+              type="e-mail"
+              class="form-control shadow-none without-border"
+              id="e-mail"
+              placeholder="E-mail"
+            />
+            <div class="underline"></div>
+          </div>
+
+          
+          <div id="senha" class="form-field">
+            <input
+              type="password"
+              class="form-control shadow-none without-border"
+              id="senha"
+              placeholder="Senha"
+            />
+
+            <div class="underline"></div>
+          </div>
+        </div>
+      
+        <div id="buttons">
+          <div id="btn-login" class="w-100">
+            <button
+              type="submit"
+              class="btn btn-primary btn-shadow btn-style w-100"
+              style="background-color: #1A55B4"
+               > <a class="btn-style" style="color: white; text-decoration: none;">Entrar</a>  
+              
+            </button>
+          </div>
+          <div id="btn-login-google" class="w-100">
+            <button type="submit" class="btn btn-light btn-shadow btn-style w-100"><img src="https://img.icons8.com/fluency/48/000000/google-logo.png" style="width: 25px; margin-right: 5px;"/>
+              Entrar com google
+            </button>
+          </div>
+          <div class="w-100">
+            
+            <a href="/sign-up" routerLinkActive="router-link-active"  style="font-size: 12px; color: rgba(0, 0, 0, 0.5);"
+              >Não tenho conta</a
+            >
+          </div>
+        </div>
+      </main>
+
+   
+
 </div>
