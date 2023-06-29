@@ -20,3 +20,22 @@
 .infos {
     height: 100vh;
 }
+
+/* --- modal login ----- */
+.modalogin {
+    width: 100vw;
+    height: 80vh;
+    background-color: #efeded;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    position: absolute;
+    top: 90vh;
+    transition: all ease 0.3s;
+    padding-top: 20px;
+}
+.font {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #1A55B4;
+
+}

@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
+import { faArrowUp, faGripLines } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'welcome',
@@ -7,5 +9,21 @@ import { Component } from '@angular/core';
 })
 export class WelcomeComponent {
 
+  public isLogin: boolean = false;
+
+  info() {
+    this.isLogin = !this.isLogin;
+  }
+
+  faArrowUp = faArrowUp;
+  faGripLines = faGripLines;
+
+  sobe: boolean = false;
+
+
+  login() { 
+    this.sobe = !this.sobe;
+
+  }
 
 }

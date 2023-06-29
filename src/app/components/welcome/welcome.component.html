@@ -4,7 +4,20 @@
         <img class="col-10" src="../../../assets/welcome.png" alt="">
         <h4>Organize seu dia com Tudu.</h4>
     </div>
-    
-    <modallogin></modallogin>
-        
+
+    <div class="modalogin"  [ngStyle]="{'top': (sobe ? '20vh' : '90vh')}">
+        <div class="row" (click)="login()" >
+            <fa-icon *ngIf="!sobe" class="col-12 d-flex justify-content-center font" [icon]="faArrowUp"></fa-icon>
+            <fa-icon *ngIf="sobe" class="col-12 d-flex justify-content-center font" [icon]="faGripLines"></fa-icon>
+        </div>
+        <modallogin  *ngIf="isLogin"></modallogin>
+        <sign-up *ngIf="!isLogin"></sign-up>
+
+        <a class="d-flex justify-content-center align-items-center" (click)="info()" *ngIf="isLogin" style=" font-size: 12px; color: rgba(0, 0, 0, 0.5);"
+            >Não tenho conta</a
+        >
+         <a class="d-flex justify-content-center align-items-center" (click)="info()" *ngIf="!isLogin" style="margin: auto; font-size: 12px; color: rgba(0, 0, 0, 0.5);"
+            >Já tenho conta</a
+        >
+    </div>
 </div>

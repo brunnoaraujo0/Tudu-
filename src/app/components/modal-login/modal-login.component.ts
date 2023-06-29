@@ -1,6 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { faArrowUp, faGripLines } from '@fortawesome/free-solid-svg-icons';
-
+import { Component} from '@angular/core';
 
 
 @Component({
@@ -9,17 +7,5 @@ import { faArrowUp, faGripLines } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./modal-login.component.css']
 })
 export class ModalLoginComponent {
-  faArrowUp = faArrowUp;
-  faGripLines = faGripLines;
-
-  sobe: boolean = false;
-
-  @Output() up = new EventEmitter();
-
-  login() { 
-    this.sobe = !this.sobe;
-    this.up.emit({novo: this.sobe})
-  }
-
 
 }

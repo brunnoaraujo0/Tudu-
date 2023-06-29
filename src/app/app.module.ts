@@ -9,6 +9,7 @@ import '@angular/localize/init';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { ModalLoginComponent } from './components/modal-login/modal-login.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AppComponent,
     WelcomeComponent,
     ModalLoginComponent,
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
