@@ -1,0 +1,35 @@
+.navegacao {
+    width: 100vw;
+    height: 70px;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    bottom: 0;
+    -webkit-box-shadow: 0px 0px 22px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 22px 5px rgba(0, 0, 0, 0.1);
+    overflow: visible;
+}
+.icone { 
+    font-size: 25px;
+    color: #1A55B4;
+}
+a {
+    margin-bottom: 17px;
+    overflow: visible;
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+.icone.plus {
+    color: #f1f1f1;
+    padding: 1rem 1.3rem;
+    background-color: #1A55B4;
+    border-radius: 2rem;
+
+}
+.icone.plus:hover {
+    color: #f1f1f1;
+    background-color: #6AA5FF;
+}
+.icone:hover {
+    color: #6AA5FF;
+}

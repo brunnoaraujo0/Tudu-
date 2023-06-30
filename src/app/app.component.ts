@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faHouse, faGripLines, faCalendar, faUser, faPlus} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'tudu';
+  
+  faHouse = faHouse;
+  faGripLines = faGripLines;
+  faCalendar = faCalendar;
+  faUser = faUser;
+  faPlus = faPlus;
+
 }
