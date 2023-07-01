@@ -27,7 +27,14 @@
     flex-direction: column;
 
 }
-
+.font {
+    margin-bottom: -25px;
+    font-size: 30px;
+    color: green;
+}
+.clk {
+    background-color: black;
+}
 .chk input {
     display: none;
 }

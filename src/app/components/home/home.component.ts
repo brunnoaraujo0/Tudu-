@@ -35,6 +35,14 @@ export class HomeComponent {
       date: '30/01/2021',
       categoria: 'contratar',
       do: false
+     },
+     {id: 3,
+      title: 'Contratação',
+      description: 'Descrição da tarefa',
+      tarefas: ['fazer cadastro', 'limpar servidor'],
+      date: '30/01/2021',
+      categoria: 'estudar',
+      do: false
      }
      
     ];

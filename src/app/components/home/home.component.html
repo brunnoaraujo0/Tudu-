@@ -1,11 +1,21 @@
 <div class="screenHome container p-4">
     <h1 class="d-flex justify-content-center">Tarefas</h1>
+    
     <h2>A FAZER</h2>
-    <tuduItem *ngFor="let tu of tudu" [tuduItem]="tu"></tuduItem>
+    <div *ngFor="let tu of tudu">
+        <tuduItem *ngIf="!tu.do" [tuduItem]="tu"></tuduItem>
+    </div>
+    
+
     <h2>EM PROGRESSO</h2>
     <div id="caixa">
          <inProgress *ngFor="let tu of tudu" [tuduItem]="tu"></inProgress>
     </div>
+
+
     <h2>CONCLUÍDO</h2>
-    <tuduItem *ngFor="let tu of tudu" [tuduItem]="tu" [teste] ="teste"></tuduItem>
+    <div *ngFor="let tu of tudu">
+        <tuduItem *ngIf="tu.do"  [tuduItem]="tu" [teste] ="teste"></tuduItem>
+    </div>
+    
 </div>

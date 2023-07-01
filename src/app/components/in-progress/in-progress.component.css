@@ -1,5 +1,5 @@
 .inProgress-item {
-    width: 130px;
+    width: 140px;
     height: 130px;
     background-color: aliceblue;
     margin-right: 20px;
@@ -12,7 +12,6 @@
 .inProgress-item h3 {
     color: white;
     font-size: 0.7rem;
-    margin-top: 10px;
     
 }
 .inProgress-item h4 {
@@ -20,4 +19,25 @@
     color: black;
     opacity: 0.4;
     margin-top: -7px;
+}
+.inProgress-item h1 {
+    font-size: 1.1rem;
+    color: black;
+    opacity: 0.4;
+    font-weight: bold;
+}
+.progressContainer {
+    width: 100%;
+    background-color: black;
+    opacity: 0.4;
+    height: 4px;
+    border-radius: 2px;
+    overflow: hidden;
+    
+}
+.progressInside {
+    opacity: 1.0 !important;
+    width: 53%;
+    height: 100%;
+    background-color: white;
 }

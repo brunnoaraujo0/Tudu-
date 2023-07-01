@@ -18,6 +18,7 @@ import { TuduItemComponent } from './components/tudu-item/tudu-item.component';
 import { InProgressComponent } from './components/in-progress/in-progress.component';
 import { AuthService } from './components/modal-login/auth.service';
 import { FormsModule } from '@angular/forms';
+import { AuthGuardService } from './guard/auth-guard.service';
 
 
 @NgModule({
@@ -40,7 +41,7 @@ import { FormsModule } from '@angular/forms';
     FontAwesomeModule,
     FormsModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
