@@ -1,8 +1,7 @@
 .screenHome {
     width: 100%;
-
     background-color: #ffffff;
-    overflow: auto;
+    overflow: auto !important;
     margin-bottom: 140px;
 }
 .screenHome h1 {
@@ -23,6 +22,6 @@ font-size: 1.3rem;
     height: 150px;
     display: flex;
     align-items: center;
-    overflow: auto;
+    overflow: auto !important;
 }
 
