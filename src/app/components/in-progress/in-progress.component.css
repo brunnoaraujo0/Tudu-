@@ -2,4 +2,22 @@
     width: 130px;
     height: 130px;
     background-color: aliceblue;
+    margin-right: 20px;
+    border-radius: 1rem;
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    flex-direction: column;
+}
+.inProgress-item h3 {
+    color: white;
+    font-size: 0.7rem;
+    margin-top: 10px;
+    
+}
+.inProgress-item h4 {
+    font-size: 0.5rem;
+    color: black;
+    opacity: 0.4;
+    margin-top: -7px;
 }

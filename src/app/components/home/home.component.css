@@ -20,15 +20,9 @@ font-size: 1.3rem;
     font-weight: bold;
 }
 #caixa {
-    height: 3rem;
-    background-color: grey;
+    height: 150px;
     display: flex;
-    padding: 1;
+    align-items: center;
     overflow: auto;
 }
-#caixa div {
-    min-width: 3rem;
-    max-height: 3rem;
-    background: red;
-    margin-left: 1rem;
-}
+
