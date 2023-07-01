@@ -1,3 +1,17 @@
-<div class="screenHome">
-    
+<div class="screenHome container p-4">
+    <h1 class="d-flex justify-content-center">Tarefas</h1>
+    <h2>A FAZER</h2>
+    <tuduItem *ngFor="let tu of tudu" [tuduItem]="tu"></tuduItem>
+    <h2>EM PROGRESSO</h2>
+    <div id="caixa">
+           <div>1</div>
+           <div>2</div>
+           <div>1</div>
+           <div>1</div>
+           <div>1</div>
+           <div>1</div>
+    </div>
+   <div style="height: 100px;">
+
+   </div>
 </div>

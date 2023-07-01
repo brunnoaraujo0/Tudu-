@@ -14,7 +14,7 @@ export class WelcomeComponent {
 
   faArrowUp = faArrowUp;
   faGripLines = faGripLines;
-
+  
 
   info() {
     this.isLogin = !this.isLogin;

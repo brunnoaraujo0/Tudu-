@@ -1,0 +1,14 @@
+<div class="screenTudu" [ngStyle] ="{'backgroundColor': (tuduItem.categoria === 'trabalho' ? '#FE746F' : tuduItem.categoria === 'estudar' ? '#6AA5FF': '#FEC857')}">
+
+
+
+    <label class="chk">
+        <input type="checkbox" name="exemplo" />
+        <span></span>
+    </label>
+    <div class="textos">
+        <h3 >{{tuduItem.title}}</h3>
+        <h4 >{{tuduItem.description}}</h4>
+    </div>
+    
+</div>

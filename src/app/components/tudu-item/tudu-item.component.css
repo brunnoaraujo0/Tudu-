@@ -1,0 +1,46 @@
+.screenTudu {
+    width: 100%;
+    height: 70px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+    
+}
+.screenTudu h3 {
+    color: white;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    
+}
+.screenTudu h4 {
+    font-size: 0.7rem;
+    color: black;
+    opacity: 0.4;
+    margin-top: -7px;
+}
+.textos {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.chk input {
+    display: none;
+}
+
+.chk span {
+    width: 30px;
+    height: 30px;
+    display: block;
+    background-color: none;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.chk input:checked + span {
+    background-color: #fff;
+}

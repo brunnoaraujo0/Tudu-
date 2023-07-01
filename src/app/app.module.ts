@@ -14,6 +14,8 @@ import { HomeComponent } from './components/home/home.component';
 import { PlannerComponent } from './components/planner/planner.component';
 import { UserComponent } from './components/user/user.component';
 import { CreateComponent } from './components/create/create.component';
+import { TuduItemComponent } from './components/tudu-item/tudu-item.component';
+import { InProgressComponent } from './components/in-progress/in-progress.component';
 
 
 @NgModule({
@@ -26,6 +28,8 @@ import { CreateComponent } from './components/create/create.component';
     PlannerComponent,
     UserComponent,
     CreateComponent,
+    TuduItemComponent,
+    InProgressComponent,
   ],
   imports: [
     BrowserModule,
