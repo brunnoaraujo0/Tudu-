@@ -7,7 +7,7 @@ import { CreateComponent } from './components/create/create.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 
 const routes: Routes = [
-  {path: 'welcome', component: WelcomeComponent},
+  {path: '', component: WelcomeComponent},
   {path: 'home', component: HomeComponent},
   {path: 'planner', component: PlannerComponent},
   {path: 'user', component: UserComponent},
