@@ -1,4 +1,6 @@
+import { Usuario } from './usuario';
 import { Component} from '@angular/core';
+import { AuthService } from './auth.service';
 
 
 @Component({
@@ -7,5 +9,14 @@ import { Component} from '@angular/core';
   styleUrls: ['./modal-login.component.css']
 })
 export class ModalLoginComponent {
+  public usuario: Usuario = new Usuario();
 
+  constructor(private authService: AuthService){}
+  ngOnInit(){
+
+  }
+
+  fazerLogin(){
+   this.authService.fazerLogin(this.usuario);
+  }
 }

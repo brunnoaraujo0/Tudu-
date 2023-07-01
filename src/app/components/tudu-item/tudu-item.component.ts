@@ -8,6 +8,7 @@ import { Component, Input } from '@angular/core';
 export class TuduItemComponent {
 
   @Input() tuduItem: any = [];
+  @Input() teste: any;
 
   constructor(){}
 }

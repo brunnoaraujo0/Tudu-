@@ -16,6 +16,8 @@ import { UserComponent } from './components/user/user.component';
 import { CreateComponent } from './components/create/create.component';
 import { TuduItemComponent } from './components/tudu-item/tudu-item.component';
 import { InProgressComponent } from './components/in-progress/in-progress.component';
+import { AuthService } from './components/modal-login/auth.service';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -35,9 +37,10 @@ import { InProgressComponent } from './components/in-progress/in-progress.compon
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

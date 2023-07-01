@@ -1,5 +1,7 @@
+
 import { Component } from '@angular/core';
 import { faHouse, faGripLines, faCalendar, faUser, faPlus} from '@fortawesome/free-solid-svg-icons';
+import { AuthService } from './components/modal-login/auth.service';
 
 
 @Component({
@@ -15,4 +17,14 @@ export class AppComponent {
   faUser = faUser;
   faPlus = faPlus;
 
+
+  mostrarMenu: boolean = false;
+  constructor(private authService: AuthService){
+
+  }
+
+  ngOnInit(){
+    this.authService.mostrarMenuEmitter.subscribe((mostrar: boolean) => this.mostrarMenu = mostrar);
+    ;
+  }
 }

@@ -4,6 +4,7 @@
         <div>
           <div id="e-mail" class="form-field">
             <input
+            [(ngModel)]="usuario.email"
               type="e-mail"
               class="form-control shadow-none without-border"
               id="e-mail"
@@ -15,6 +16,7 @@
           
           <div id="senha" class="form-field">
             <input
+              [(ngModel)]="usuario.senha"
               type="password"
               class="form-control shadow-none without-border"
               id="senha"
@@ -31,7 +33,8 @@
               type="submit"
               class="btn btn-primary btn-shadow btn-style w-100"
               style="background-color: #1A55B4"
-               > <a href="/" class="btn-style" style="color: white; text-decoration: none;">Entrar</a>  
+              (click)="fazerLogin()"
+               > Entrar
               
             </button>
           </div>

@@ -9,7 +9,7 @@ import { Component, Input } from '@angular/core';
 })
 export class HomeComponent {
   
- 
+  teste: string ='fazer';
 
   public tudu = [
     {id: 0,
@@ -17,21 +17,24 @@ export class HomeComponent {
       description: 'Descrição da tarefa',
       tarefas: ['fazer cadastro', 'limpar servidor'],
       date: '30/01/2021',
-      categoria: 'trabalho'
+      categoria: 'trabalho',
+      do: false
      },
      {id: 1,
        title: 'Entrevista com a empresa',
        description: 'Descrição da tarefa',
        tarefas: ['fazer cadastro', 'limpar servidor'],
        date: '30/01/2021',
-       categoria: 'estudar'
+       categoria: 'estudar',
+       do: true
      },
      {id: 2,
       title: 'Contratação',
       description: 'Descrição da tarefa',
       tarefas: ['fazer cadastro', 'limpar servidor'],
       date: '30/01/2021',
-      categoria: 'contratar'
+      categoria: 'contratar',
+      do: false
      }
      
     ];

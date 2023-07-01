@@ -6,7 +6,6 @@
     <div id="caixa">
          <inProgress *ngFor="let tu of tudu" [tuduItem]="tu"></inProgress>
     </div>
-   <div style="height: 100px;">
-
-   </div>
+    <h2>CONCLUÍDO</h2>
+    <tuduItem *ngFor="let tu of tudu" [tuduItem]="tu" [teste] ="teste"></tuduItem>
 </div>
