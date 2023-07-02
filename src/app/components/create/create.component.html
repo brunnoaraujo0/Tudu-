@@ -36,7 +36,7 @@
             <input *ngFor="let item of nInput" type="text" name="categoria" placeholder="sub-tarefa exemplo" class="subtarefa" >
             
             <div class="d-flex mt-2">
-                <fa-icon class="col-1 d-flex justify-content-center font" [icon]="faPlus"></fa-icon>
+                <fa-icon class="d-flex justify-content-center font" [icon]="faPlus" style="color: black;"></fa-icon>
                 <button (click) = "addTarefa()">Adicionar Subtarefa</button>
             </div>
             

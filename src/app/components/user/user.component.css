@@ -1,5 +1,70 @@
-.screenCreate {
-    width: 100%;
+.screenUser {
+    background-color: #efeded;
+    width: 100vw;
     height: 100vh;
-    background-color: brown;
+    overflow: hidden !important;
+}
+
+.modalogin {
+    width: 100%;
+    height: 80vh;
+    background-color: white;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    position: absolute;
+    bottom: 0;
+    transition: all ease 0.3s;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.modalogin img {
+    width: 160px;
+    border-radius: 80px;
+    margin-top: -100px;
+}
+.user {
+    color: #1A55B4;
+    font-size: 2.2rem;
+    margin-top: 30px;
+}
+.in {
+    width: 45%;
+    height: 100px;
+    border-radius: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    
+}
+.in h1 {
+    color: white;
+    font-weight: bold;
+    font-size: 3rem;
+    letter-spacing: -2px;
+}
+.in h2 {
+    color: white;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+.w-100{
+    margin-top: 20px;
+    justify-content: space-around;
+}
+.font {
+    font-size: 30px;
+    color: #1A55B4;
+    margin-right: 10px;
+}
+.logout {
+    color: #1A55B4;
+    font-weight: bold;
+}
+.divisoria {
+    height: 1px;
+    margin-top: 40px;
+    width: 80%;
+    background-color: #1A55B4;
 }
