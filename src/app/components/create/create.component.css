@@ -1,5 +1,83 @@
+
 .screenCreate {
-    width: 100%;
+    background-color: white;
+    width: 100vw;
     height: 100vh;
-    background-color: rgb(255, 227, 127);
+    overflow: hidden !important;
+    
+}
+.screenCreate h1 {
+    margin-top: 40px;
+    font-weight: 600;
+    color: #000712;
+    font-size: 1.3rem;
+    }
+
+/* --- modal login ----- */
+.modalogin {
+    width: 100vw;
+    height: 90vh;
+    background-color: #efeded;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    position: absolute;
+    bottom: 0;
+    transition: all ease 0.3s;
+    padding-top: 50px;
+    padding: 3rem;
+    overflow: scroll;
+    padding-bottom: 90px;
+}
+.font {
+    font-size: 20px;
+    color: #979797;
+    margin-right: 10px;
+}
+input {
+    background-color: #efeded;
+    border: none;
+    width: 100%;
+}
+.titulo input::placeholder {
+    color: #1A55B4;
+    font-size: 1.5rem;
+  }
+.descricao input::placeholder {
+    font-size: 0.8rem;
+  }
+.titulo {
+    margin-top: 30px;
+  }
+.descricao {
+    margin-top: 30px;
+}
+.box {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+input::placeholder.data  {
+    color: #1A55B4;
+}
+input {
+    color: #979797;
+}
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+.divisoria {
+    height: 1px;
+    margin-top: 40px;
+    width: 100%;
+    background-color: #979797;
+}
+.subtarefa {
+    margin-top: 15px;
+}
+button {
+    background-color: #efeded;
+    border: none;
+
 }
