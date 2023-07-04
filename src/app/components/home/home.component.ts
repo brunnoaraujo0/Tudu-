@@ -1,3 +1,4 @@
+import { ActivatedRoute, Router } from '@angular/router';
 import { TuduItemComponent } from './../tudu-item/tudu-item.component';
 import { Component, Input } from '@angular/core';
 
@@ -10,6 +11,7 @@ import { Component, Input } from '@angular/core';
 export class HomeComponent {
   
   teste: string ='fazer';
+  pagina!: number;
 
   public tudu = [
     {id: 0,
@@ -47,9 +49,20 @@ export class HomeComponent {
      
     ];
 
-
-    constructor(){
+    
+    constructor(private router: Router,
+                private route: ActivatedRoute){
       
-  
-    }    
+    } 
+    ngOnInit() {
+      this.route.queryParams.subscribe(
+        (queryParams: any) => {
+          this.pagina = queryParams['pagina'];
+        }
+      )
+    } 
+    
+   
+   
+
 }

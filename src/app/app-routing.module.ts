@@ -6,14 +6,15 @@ import { UserComponent } from './components/user/user.component';
 import { CreateComponent } from './components/create/create.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { AuthGuardService } from './guard/auth-guard.service';
+import { ShowTuduComponent } from './components/show-tudu/show-tudu.component';
 
 const routes: Routes = [
   {path: '', component: WelcomeComponent },
   {path: 'home', component: HomeComponent, canActivate: [AuthGuardService]},
   {path: 'planner', component: PlannerComponent, canActivate: [AuthGuardService]},
   {path: 'user', component: UserComponent, canActivate: [AuthGuardService]},
-  {path: 'create', component: CreateComponent, canActivate: [AuthGuardService]}
-  
+  {path: 'create', component: CreateComponent, canActivate: [AuthGuardService]},
+  {path: 'showTudu', component: ShowTuduComponent, canActivate: [AuthGuardService]}
 
 ];
 

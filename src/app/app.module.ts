@@ -19,6 +19,7 @@ import { InProgressComponent } from './components/in-progress/in-progress.compon
 import { AuthService } from './components/modal-login/auth.service';
 import { FormsModule } from '@angular/forms';
 import { AuthGuardService } from './guard/auth-guard.service';
+import { ShowTuduComponent } from './components/show-tudu/show-tudu.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { AuthGuardService } from './guard/auth-guard.service';
     CreateComponent,
     TuduItemComponent,
     InProgressComponent,
+    ShowTuduComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,7 @@
 
 <router-outlet></router-outlet>
 <div *ngIf="mostrarMenu" class="navegacao d-flex justify-content-center align-items-center ">
-    <a [routerLink]="['/home']" routerLinkActive="router-link-active" ><fa-icon class="icone" [icon]="faHouse"></fa-icon></a>
+    <a [routerLink]="['/home']" [queryParams]="{pagina:1}" routerLinkActive="router-link-active" ><fa-icon class="icone" [icon]="faHouse"></fa-icon></a>
     <a [routerLink]="['/planner']" routerLinkActive="router-link-active" ><fa-icon class="icone" [icon]="faCalendar"></fa-icon></a>
     <a [routerLink]="['/user']" routerLinkActive="router-link-active" ><fa-icon class="icone" [icon]="faUser"></fa-icon></a>
     <a [routerLink]="['/create']" routerLinkActive="router-link-active" > <fa-icon class="icone plus" [icon]="faPlus"></fa-icon></a>

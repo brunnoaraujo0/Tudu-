@@ -1,0 +1,69 @@
+.screenShowtudu {
+    width: 100vw;
+    height: 100vh;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+.description {
+    font-size: 0.9rem;
+    color: #757575;
+}
+.date,
+.anexos,
+.work {
+    font-size: 0.6rem;
+    color: #757575;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+
+}
+.font {
+    font-size: 20px;
+    color: #757575;
+    margin-right: 10px;
+}
+.divisoria {
+    height: 1px;
+    margin-top: 40px;
+    width: 100%;
+    background-color: #757575;
+}
+.font1 {
+    margin-bottom: -25px;
+    font-size: 30px;
+    color: green;
+}
+
+
+.clk {
+    background-color: black;
+}
+.chk input {
+    display: none;
+}
+
+.chk span {
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-color: none;
+    border: 2px solid #757575;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.chk input:checked + span {
+    background-color: #fff;
+}
+
+button {
+    background-color: rgba(255,0,0, 0);
+    border: none;
+
+}
+
