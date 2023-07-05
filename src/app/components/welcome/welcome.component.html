@@ -5,7 +5,7 @@
         <h4>Organize seu dia com Tudu.</h4>
     </div>
 
-    <div class="modalogin"  [ngStyle]="{'top': (sobe ? '20vh' : '90vh')}">
+    <div class="modalogin"  [ngStyle]="{'height': (sobe ? '90vh' : '7vh')}">
         <div class="row" (click)="login()" >
             <fa-icon *ngIf="!sobe" class="col-12 d-flex justify-content-center font" [icon]="faArrowUp"></fa-icon>
             <fa-icon *ngIf="sobe" class="col-12 d-flex justify-content-center font" [icon]="faGripLines"></fa-icon>

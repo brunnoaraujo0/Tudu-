@@ -1,15 +1,15 @@
-<div class="screenTudu" [ngStyle] ="{'backgroundColor': (tuduItem.categoria === 'trabalho' && tuduItem.do === false ? '#FE746F' : tuduItem.categoria === 'estudar' && tuduItem.do === false ? '#6AA5FF' : tuduItem.do === true ? '#f1f1f1' : '#FEC857'),}">
+<div class="screenTudu" [ngStyle] ="{'backgroundColor': (todos.categoria === 'trabalho' && todos.do === false ? '#FE746F' : todos.categoria === 'estudar' && todos.do === false ? '#6AA5FF' : todos.do === true ? '#f1f1f1' : '#FEC857'),}">
     <label class="chk" >
         <div class="pro">
-            <fa-icon *ngIf="tuduItem.do" class="col-12 d-flex justify-content-center font" [icon]="faCheck"></fa-icon>
-            <input type="checkbox" name="exemplo" (click)="feito(tuduItem)"/>
+            <fa-icon *ngIf="todos.do" class="col-12 d-flex justify-content-center font" [icon]="faCheck"></fa-icon>
+            <input type="checkbox" name="exemplo" (click)="feito()"/>
             <span></span>
         </div>
         
     </label>
-    <div class="textos"  (click)="showTudu(tuduItem)">
-        <h3 [ngStyle]="{color: (tuduItem.do ? 'black' : 'white')}" >{{tuduItem.title}}</h3>
-        <h4 >{{tuduItem.description}}</h4>
+    <div class="textos"  (click)="showTudu(todos)">
+        <h3 [ngStyle]="{color: (todos.do ? 'black' : 'white')}" >{{todos.title}}</h3>
+        <h4 >{{todos.description}}</h4>
     </div>
     
 </div>

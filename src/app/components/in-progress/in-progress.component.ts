@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { Todo } from 'src/app/models/todo';
+import { TodoService } from 'src/app/services/todo.service';
 
 @Component({
   selector: 'inProgress',
@@ -6,12 +8,24 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./in-progress.component.css']
 })
 export class InProgressComponent {
-  @Input() tuduItem: any = [];
+
+  @Input() todoId!: number;
+
+  todo = {} as Todo;
+  todos!: Todo;
   
- login() {
-  console.log(this.tuduItem)
+
+ constructor(private todoService: TodoService){
  }
- constructor(){
-  this.login();
- }
+ 
+ getCarById(todoId: number) {
+  this.todoService.getCarById(todoId).subscribe((todo: Todo) => {
+    this.todos = todo;
+  });
+}
+
+ngOnInit() {
+  this.getCarById(this.todoId);
+}
+
 }

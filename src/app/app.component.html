@@ -1,5 +1,5 @@
 
-<router-outlet></router-outlet>
+<router-outlet ></router-outlet>
 <div *ngIf="mostrarMenu" class="navegacao d-flex justify-content-center align-items-center ">
     <a [routerLink]="['/home']" [queryParams]="{pagina:1}" routerLinkActive="router-link-active" ><fa-icon class="icone" [icon]="faHouse"></fa-icon></a>
     <a [routerLink]="['/planner']" routerLinkActive="router-link-active" ><fa-icon class="icone" [icon]="faCalendar"></fa-icon></a>

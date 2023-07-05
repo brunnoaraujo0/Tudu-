@@ -1,0 +1,76 @@
+{
+  "todo": [
+    {
+      "id": 0,
+      "title": "Desafio de Design UI/UX",
+      "description": "Descrição da tarefa",
+      "tarefas": [
+        {
+          "subTarefa": "Fazer cadastro",
+          "do": false
+        },
+        {
+          "subtarefa": "Limpar HD",
+          "do": true
+        }
+      ],
+      "date": "30/01/2021",
+      "categoria": "trabalho",
+      "do": false
+    },
+    {
+      "id": 1,
+      "title": "Entrevista com a empresa",
+      "description": "Descrição da tarefa",
+      "tarefas": [
+        {
+          "subTarefa": "Fazer cadastro",
+          "do": true
+        },
+        {
+          "subtarefa": "Limpar HD",
+          "do": false
+        }
+      ],
+      "date": "30/01/2021",
+      "categoria": "estudar",
+      "do": true
+    },
+    {
+      "id": 2,
+      "title": "Contratação de estagio",
+      "description": "Descrição da tarefa",
+      "tarefas": [
+        {
+          "subTarefa": "Fazer cadastro",
+          "do": false
+        },
+        {
+          "subtarefa": "Limpar HD",
+          "do": false
+        }
+      ],
+      "date": "30/01/2021",
+      "categoria": "contratar",
+      "do": true
+    },
+    {
+      "id": 3,
+      "title": "Entrevista com a empresa",
+      "description": "Descrição da tarefa",
+      "tarefas": [
+        {
+          "subTarefa": "Fazer cadastro",
+          "do": true
+        },
+        {
+          "subtarefa": "Limpar HD",
+          "do": false
+        }
+      ],
+      "date": "30/01/2021",
+      "categoria": "estudar",
+      "do": true
+    }
+  ]
+}

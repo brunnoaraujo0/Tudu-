@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
 import '@angular/localize/init';
 
 import { WelcomeComponent } from './components/welcome/welcome.component';
@@ -35,13 +36,15 @@ import { ShowTuduComponent } from './components/show-tudu/show-tudu.component';
     TuduItemComponent,
     InProgressComponent,
     ShowTuduComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     FontAwesomeModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [AuthService, AuthGuardService],
   bootstrap: [AppComponent]

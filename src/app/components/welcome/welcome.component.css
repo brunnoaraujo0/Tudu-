@@ -24,14 +24,15 @@
 /* --- modal login ----- */
 .modalogin {
     width: 100vw;
-    height: 80vh;
+    height: 7vh;
     background-color: #efeded;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     position: absolute;
-    top: 80vh;
     transition: all ease 0.3s;
     padding-top: 20px;
+    bottom: 0;
+    overflow: hidden !important;
 }
 .font {
     margin-top: 10px;

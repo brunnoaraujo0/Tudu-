@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { faArrowUp, faGripLines, faUsers, faPaperclip, faTag, faPlus, faArrowLeft, faCheck } from '@fortawesome/free-solid-svg-icons';
 import { faCalendar } from '@fortawesome/free-regular-svg-icons';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Todo } from 'src/app/models/todo';
+import { TodoService } from 'src/app/services/todo.service';
 
 
 @Component({
@@ -15,41 +17,18 @@ export class ShowTuduComponent {
   nInput: number[] = [0];
   idTudu!: number;
 
-  public tudu = [
-    {id: 0,
-      title: 'Desafio de Design UI/UX',
-      description: 'Descrição da tarefa',
-      tarefas: ['fazer cadastro', 'limpar servidor'],
-      date: '30/01/2021',
-      categoria: 'trabalho',
-      do: false
-     },
-     {id: 1,
-       title: 'Entrevista com a empresa',
-       description: 'Descrição da tarefa',
-       tarefas: ['fazer cadastro', 'limpar servidor'],
-       date: '30/01/2021',
-       categoria: 'estudar',
-       do: true
-     },
-     {id: 2,
-      title: 'Contratação',
-      description: 'Descrição da tarefa',
-      tarefas: ['fazer cadastro', 'limpar servidor'],
-      date: '30/01/2021',
-      categoria: 'contratar',
-      do: false
-     },
-     {id: 3,
-      title: 'Contratação',
-      description: 'Descrição da tarefa',
-      tarefas: ['fazer cadastro', 'limpar servidor'],
-      date: '30/01/2021',
-      categoria: 'estudar',
-      do: false
-     }
-     
-    ];
+
+  @Input() todoId!: number;
+
+  todo = {} as Todo;
+  todos!: Todo;
+
+    getCarById(todoId: number) {
+      this.todoService.getCarById(todoId).subscribe((todo: Todo) => {
+        this.todos = todo;
+        console.log(this.todos);
+      });
+    }
 
   faCheck = faCheck;
   faArrowUp = faArrowUp;
@@ -69,7 +48,7 @@ export class ShowTuduComponent {
     this.isLogin = !this.isLogin;
   }
   constructor(private router: Router,
-    private route: ActivatedRoute){
+    private route: ActivatedRoute, private todoService: TodoService){
 
 } 
 ngOnInit() {
@@ -78,9 +57,13 @@ this.route.queryParams.subscribe(
 this.idTudu = queryParams['pagina'];
 }
 )
+this.getCarById(this.idTudu);
 }
 
 backHome() {
   this.router.navigate(['/home']);
 }
+
+
+
 }

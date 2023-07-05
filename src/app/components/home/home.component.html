@@ -2,20 +2,20 @@
     <h1 class="d-flex justify-content-center">Tarefas</h1>
     
     <h2>A FAZER</h2>
-    <div *ngFor="let tu of tudu">
-        <tuduItem *ngIf="!tu.do" [tuduItem]="tu" ></tuduItem>
+    <div *ngFor="let tu of todos">
+        <tuduItem *ngIf="!tu.do" [todoId]="tu.id" ></tuduItem>
     </div>
     
 
     <h2>EM PROGRESSO</h2>
     <div id="caixa">
-         <inProgress *ngFor="let tu of tudu" [tuduItem]="tu"></inProgress>
+         <inProgress *ngFor="let tu of todos" [todoId]="tu.id"></inProgress>
     </div>
 
 
     <h2>CONCLUÍDO</h2>
-    <div *ngFor="let tu of tudu">
-        <tuduItem *ngIf="tu.do"  [tuduItem]="tu" [teste] ="teste"></tuduItem>
+    <div *ngFor="let tu of todos">
+        <tuduItem *ngIf="tu.do"  [todoId]="tu.id"></tuduItem>
     </div>
     
 </div>
