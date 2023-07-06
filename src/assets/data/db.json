@@ -58,7 +58,7 @@
       ],
       "date": "30/01/2021",
       "categoria": "contratar",
-      "do": false
+      "do": true
     },
     {
       "id": 3,
@@ -83,7 +83,7 @@
       ],
       "date": "30/01/2021",
       "categoria": "estudar",
-      "do": false
+      "do": true
     },
     {
       "id": 4,
@@ -97,7 +97,7 @@
       ],
       "date": "0002-02-22",
       "categoria": "contratar",
-      "do": false
+      "do": true
     }
   ]
 }
