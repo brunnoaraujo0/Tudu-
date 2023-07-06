@@ -10,7 +10,7 @@ import { retry, catchError } from 'rxjs/operators';
 })
 export class TodoService {
 
-  url = 'https://json-server-beta-rosy.vercel.app/todo'; // api rest fake
+  url = 'https://json-server-g8hnnr991-brunnoaraujo0.vercel.app/todo'; // api rest fake
 
 
   constructor(private httpClient: HttpClient) {
