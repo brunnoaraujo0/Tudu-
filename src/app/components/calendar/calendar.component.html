@@ -1,0 +1,37 @@
+<div class="am-demo-page">
+
+        <List className="calendar-list" style="background-color: 'white'">
+          <ListItem className="item" [extra]="_switch">
+            {{ this.state.en ? 'english' : '中文' }}
+          </ListItem>
+          <ListItem [arrow]="'horizontal'" (onClick)="onClick_0()">
+            {{ this.state.en ? 'ngModel' : 'ngModel' }}
+          </ListItem>
+        </List>
+
+        <ng-template #_switch>
+            <Switch className="right" [checked]="!this.state.en" (onChange)="this.changeLanguage()"></Switch>
+          </ng-template>
+
+      <Calendar
+        [(ngModel)]="this.state.date"
+        [locale]="this.state.en ? 'enUS' : 'zhCN'"
+        [enterDirection]="this.state.enterDirection"
+        [visible]="this.state.show"
+        [getDateExtra]="this.state.getDateExtra"
+        [defaultDate]="this.state.now"
+        [minDate]="this.state.minDate"
+        [maxDate]="this.state.maxDate"
+        [pickTime]="this.state.pickTime"
+        [type]="this.state.type"
+        [rowSize]="this.state.rowSize"
+        [showShortcut]="this.state.showShortcut"
+        [infinite]="this.state.infinite"
+        [defaultValue]="this.state.defaultValue"
+        [onSelect]="this.state.onSelect"
+        (onCancel)="triggerCancel()"
+        (onConfirm)="triggerConfirm($event)"
+        (onSelectHasDisableDate)="triggerSelectHasDisableDate($event)"
+      ></Calendar>
+
+</div>

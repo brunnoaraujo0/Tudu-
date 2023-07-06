@@ -9,13 +9,16 @@ import { faArrowUp, faGripLines } from '@fortawesome/free-solid-svg-icons';
 })
 export class WelcomeComponent {
 
+
+//VARIAVEIS ---------------------
   public isLogin: boolean = true;
   sobe: boolean = false;
 
+  //ICONES ---------------------
   faArrowUp = faArrowUp;
   faGripLines = faGripLines;
   
-
+//FUNCOES ---------------------
   info() {
     this.isLogin = !this.isLogin;
   }

@@ -12,18 +12,6 @@ import { TodoService } from 'src/app/services/todo.service';
 })
 export class TuduItemComponent {
 
-  @Input() todoId!: number;
-
-  todo = {} as Todo;
-  todos!: Todo;
-  
-  
-
-  @Input() tuduItem: any = [];
-  @Input() teste: any;
-  pagina!: number;
-  faCheck = faCheck;
-
   constructor(private router: Router,
     private route: ActivatedRoute, private todoService: TodoService){
 } 
@@ -34,35 +22,58 @@ export class TuduItemComponent {
     this.pagina = queryParams['pagina'];
     }
     )
-    this.getCarById(this.todoId);
+    this.getTodoById(this.todoId);
     } 
+
+// VARIAVEIS -----------------------------
+  @Input() todoId!: number;
+  todos!: Todo;
+  pagina!: number;
+
+
+  // ICONES -----------------------------
+  faCheck = faCheck;
+
+
   
+
+//FUNCOES -----------------------
   showTudu(tu: any) {
     console.log(tu);
     this.router.navigate(['/showTudu'], {queryParams: {'pagina': this.todos.id }});
   }
 
-  feito() {
-    
+  feito() { 
     this.todos.do = !this.todos.do;
-    this.updateCar(this.todos);
+
+    if(this.todos.do){
+      for(let i=0; i<this.todos.tarefas.length; i++){
+        this.todos.tarefas[i].do = true;
+      }
+    }
+    else{
+      for(let i=0; i<this.todos.tarefas.length; i++){
+        this.todos.tarefas[i].do = false;
+      }
+    }
+    
+
+    this.updateTodo(this.todos);
     this.showTudu(this.todos);
+
   }
 
-  getCarById(todoId: number) {
-    this.todoService.getCarById(todoId).subscribe((todo: Todo) => {
+  getTodoById(todoId: number) {
+    this.todoService.getTodoById(todoId).subscribe((todo: Todo) => {
       this.todos = todo;
-      console.log(this.todos);
     });
   }
 
-  updateCar(todo: Todo) {
-      this.todoService.updateCar(todo).subscribe(() => {
+  updateTodo(todo: Todo) {
+      this.todoService.updateTodo(todo).subscribe(() => {
         console.log('deu certo');
       });
     }
-
-   
 
   }
 

@@ -21,16 +21,18 @@
     </div>
     <div class="divisoria"></div>
 
-    <div *ngFor="let tarefa of todos.tarefas" class="d-flex mt-3 align-items-center">
+    <div *ngFor="let tarefa of todos.tarefas;"  class="d-flex mt-3 align-items-center" id="tarefa.id">
         <label class="chk" >
             <div class="pro">
                 <fa-icon *ngIf="tarefa.do" class="col-12 d-flex justify-content-center font1" [icon]="faCheck"></fa-icon>
-                <input type="checkbox"/>
+                <input type="checkbox" (click) ="checked(tarefa.id)"/>
                 <span></span>
             </div>  
         </label>
         <h2 style="color: #757575; margin: auto 0; " class="subtarefa" [ngStyle] ="{'fontStyle': (tarefa.do ? 'italic' : 'normal'), 'textDecoration': (tarefa.do ? ' line-through' : 'none')}">{{tarefa.subTarefa}}</h2>
     </div>
+
+
             <div class="d-flex mt-2">
                 <fa-icon class="d-flex justify-content-center font" [icon]="faPlus" style="color: black;"></fa-icon>
                 <button (click) = "addTarefa()">Adicionar Subtarefa</button>

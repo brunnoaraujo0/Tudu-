@@ -1,8 +1,8 @@
 <div class="inProgress-item" [ngStyle] ="{'backgroundColor': (todos.categoria === 'trabalho' ? '#FE746F' : todos.categoria === 'estudar' ? '#6AA5FF': '#FEC857')}">
     <h3 >{{todos.title}}</h3>
     <h4 >{{todos.description}}</h4>
-    <h1>53%</h1>
+    <h1>{{progress}}%</h1>
     <div class="progressContainer">
-        <div class="progressInside"></div>
+        <div class="progressInside" style="width: {{progress}}%;"></div>
     </div>
 </div>

@@ -2,27 +2,31 @@
     <h1 class="d-flex justify-content-center">Criar tarefa</h1>
     <div class="container modalogin" >
         <div class="titulo">
-            <input type="text" name="titulo" placeholder="Digite o título">
+            <input type="text" name="titulo" placeholder="Digite o título" [(ngModel)]="title" style="color: #1A55B4; font-size: 1.5rem ;">
         </div>
 
         <div class="descricao">
-            <input type="text" name="descricao" placeholder="Adicione uma descrição (opcional)">
+            <input type="text" name="descricao" placeholder="Adicione uma descrição (opcional)" [(ngModel)]="desciption">
 
         </div>
 
         <div class="box">
             <fa-icon class="col-1 d-flex justify-content-center font" [icon]="faCalendar"></fa-icon>
-            <input type="date" name="data" placeholder="Inserir prazo" class="data">
+            <input type="date" name="data" placeholder="Inserir prazo" class="data" [(ngModel)]="date">
         </div>
 
        <div class="box">
-             <fa-icon class="col-1 d-flex justify-content-center font" [icon]="faTag"></fa-icon>
-            <input type="text" name="categoria" placeholder="Inserir categoria" >
+        <fa-icon class="col-1 d-flex justify-content-center font" [icon]="faTag"></fa-icon>
+        <select  name="select" [(ngModel)]="categoria" style="background-color: #efeded; border: none;">
+            <option autofocus value="trabalho" selected>Trabalho</option>
+            <option value="contratar">Contratar</option>
+            <option value="estudar">Estudar</option>
+          </select>
        </div>
 
        <div class="box">
             <fa-icon class="col-1 d-flex justify-content-center font" [icon]="faUsers"></fa-icon>
-             <input type="text" name="membros" placeholder="Adicionar Membros">
+             <input type="text" name="membros" placeholder="Adicionar Membros" >
        </div>
 
        <div class="box">
@@ -33,12 +37,22 @@
         <div class="divisoria"></div>
         
        
-            <input *ngFor="let item of nInput" type="text" name="categoria" placeholder="sub-tarefa exemplo" class="subtarefa" >
+            <input *ngFor="let item of nInput" [(ngModel)]="sub" type="text" name="categoria" placeholder="sub-tarefa exemplo" class="subtarefa" >
             
             <div class="d-flex mt-2">
                 <fa-icon class="d-flex justify-content-center font" [icon]="faPlus" style="color: black;"></fa-icon>
                 <button (click) = "addTarefa()">Adicionar Subtarefa</button>
             </div>
             
+            <div id="btn-login" class="w-100 d-flex align-items-center justify-content-center mt-3">
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-shadow btn-style w-50"
+                  style="background-color: #1A55B4"
+                  (click)="criar()"
+                   > Criar
+                  
+                </button>
+              </div>
     </div>
 </div>

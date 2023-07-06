@@ -13,34 +13,34 @@ import { Todo } from 'src/app/models/todo';
 })
 export class HomeComponent implements OnInit {
   
+    
+  constructor(private router: Router,
+    private route: ActivatedRoute, private todoService: TodoService ){ 
+} 
 
+    ngOnInit() {
+  this.route.queryParams.subscribe(
+    (queryParams: any) => {
+      this.pagina = queryParams['pagina'];
+    }
+  )
+  this.getTodos();
+    } 
+
+  //VARIAVEIS ----------------------------
     pagina!: number;
     todo = {} as Todo;
     todos!: Todo[];
     
-    
-    constructor(private router: Router,
-                private route: ActivatedRoute, private todoService: TodoService ){ 
-    } 
 
-    getCars() {
-      this.todoService.getCars().subscribe((todo: Todo[]) => {
+    
+    //FUNCOES ----------------------------
+    getTodos() {
+      this.todoService.getTodos().subscribe((todo: Todo[]) => {
         this.todos = todo;
       });
     }
     
-
-    
-    ngOnInit() {
-      this.route.queryParams.subscribe(
-        (queryParams: any) => {
-          this.pagina = queryParams['pagina'];
-        }
-      )
-      this.getCars();
-    } 
-    
-   
     showTudu(tu: any) {
       this.router.navigate(['/showTudu'], {queryParams: {'pagina': tu.id }});
     }

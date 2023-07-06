@@ -10,7 +10,7 @@ import { retry, catchError } from 'rxjs/operators';
 })
 export class TodoService {
 
-  url = 'http://localhost:3000/todo'; // api rest fake
+  url = 'https://json-server-five-pi.vercel.app/todo'; // api rest fake
 
 
   constructor(private httpClient: HttpClient) {
@@ -22,7 +22,7 @@ export class TodoService {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     }
 
-    getCars(): Observable<Todo[]> {
+    getTodos(): Observable<Todo[]> {
       return this.httpClient.get<Todo[]>(this.url)
         .pipe(
           retry(2),
@@ -30,7 +30,7 @@ export class TodoService {
     }
 
 
-    getCarById(id: number): Observable<Todo> {
+    getTodoById(id: number): Observable<Todo> {
       return this.httpClient.get<Todo>(this.url + '/' + id)
         .pipe(
           retry(2),
@@ -38,7 +38,7 @@ export class TodoService {
         )
     }
 
-    updateCar(todo: Todo): Observable<Todo> {
+    updateTodo(todo: Todo): Observable<Todo> {
       return this.httpClient.put<Todo>(this.url + '/' + todo.id, JSON.stringify(todo), this.httpOptions)
         .pipe(
           retry(1),
@@ -46,6 +46,13 @@ export class TodoService {
         )
     }
 
+    createTodo(todo: Todo): Observable<Todo> {
+      return this.httpClient.post<Todo>(this.url, JSON.stringify(todo), this.httpOptions)
+        .pipe(
+          retry(2),
+          catchError(this.handleError)
+        )
+    }
 
     handleError(error: HttpErrorResponse) {
       let errorMessage = '';

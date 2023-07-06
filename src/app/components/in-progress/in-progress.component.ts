@@ -9,23 +9,40 @@ import { TodoService } from 'src/app/services/todo.service';
 })
 export class InProgressComponent {
 
-  @Input() todoId!: number;
-
-  todo = {} as Todo;
-  todos!: Todo;
   
+  constructor(private todoService: TodoService){
+  }
 
- constructor(private todoService: TodoService){
- }
- 
- getCarById(todoId: number) {
-  this.todoService.getCarById(todoId).subscribe((todo: Todo) => {
+
+  ngOnInit() {
+  this.getTodoById(this.todoId);
+  }
+
+  //VARIAVEIS --------------------
+  @Input() todoId!: number;
+  todos!: Todo;
+  done: number =0;
+  progress: number = 0;
+  do: number = 0;
+
+
+  //FUNCOES --------------------
+ getTodoById(todoId: number) {
+  this.todoService.getTodoById(todoId).subscribe((todo: Todo) => {
     this.todos = todo;
+    this.showProgress()
   });
+ 
 }
 
-ngOnInit() {
-  this.getCarById(this.todoId);
-}
+  showProgress(){
+    for(let i=0; i < this.todos.tarefas.length; i++){
+      if(this.todos.tarefas[i].do){
+        this.done= this.done + 1;
+      }
+    }
+    this.progress = Math.floor((this.done / this.todos.tarefas.length)*100);
+    
+  }
 
 }

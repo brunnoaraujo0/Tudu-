@@ -6,12 +6,14 @@
       "description": "Descrição da tarefa",
       "tarefas": [
         {
+          "id": 0,
           "subTarefa": "Fazer cadastro",
           "do": false
         },
         {
+          "id": 1,
           "subtarefa": "Limpar HD",
-          "do": true
+          "do": false
         }
       ],
       "date": "30/01/2021",
@@ -24,12 +26,14 @@
       "description": "Descrição da tarefa",
       "tarefas": [
         {
+          "id": 0,
           "subTarefa": "Fazer cadastro",
           "do": true
         },
         {
+          "id": 1,
           "subtarefa": "Limpar HD",
-          "do": false
+          "do": true
         }
       ],
       "date": "30/01/2021",
@@ -42,17 +46,19 @@
       "description": "Descrição da tarefa",
       "tarefas": [
         {
+          "id": 0,
           "subTarefa": "Fazer cadastro",
-          "do": false
+          "do": true
         },
         {
+          "id": 1,
           "subtarefa": "Limpar HD",
           "do": false
         }
       ],
       "date": "30/01/2021",
       "categoria": "contratar",
-      "do": true
+      "do": false
     },
     {
       "id": 3,
@@ -60,17 +66,38 @@
       "description": "Descrição da tarefa",
       "tarefas": [
         {
+          "id": 0,
           "subTarefa": "Fazer cadastro",
           "do": true
         },
         {
+          "id": 1,
+          "subtarefa": "Limpar HD",
+          "do": true
+        },
+        {
+          "id": 2,
           "subtarefa": "Limpar HD",
           "do": false
         }
       ],
       "date": "30/01/2021",
       "categoria": "estudar",
-      "do": true
+      "do": false
+    },
+    {
+      "id": 4,
+      "title": "Estudar Cd",
+      "description": "estudar cd ja ja",
+      "tarefas": [
+        {
+          "subtarefa": "dfdfd",
+          "do": false
+        }
+      ],
+      "date": "0002-02-22",
+      "categoria": "contratar",
+      "do": false
     }
   ]
 }

@@ -15,7 +15,8 @@ export class ModalLoginComponent {
   ngOnInit(){
 
   }
-
+  
+//FUNCOES
   fazerLogin(){
    this.authService.fazerLogin(this.usuario);
   }

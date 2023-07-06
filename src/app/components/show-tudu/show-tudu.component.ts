@@ -12,24 +12,30 @@ import { TodoService } from 'src/app/services/todo.service';
   styleUrls: ['./show-tudu.component.css']
 })
 export class ShowTuduComponent {
+
+  constructor(private router: Router,
+    private route: ActivatedRoute, private todoService: TodoService){
+  } 
+
+  ngOnInit() {
+    this.route.queryParams.subscribe(
+      (queryParams: any) => {
+    this.idTudu = queryParams['pagina'];
+    }
+      )
+    this.getTodoById(this.idTudu);
+    }
+
+
+  //VARIAVEIS -------------------------------------------
+  @Input() todoId!: number;
   public isLogin: boolean = true;
   sobe: boolean = false;
   nInput: number[] = [0];
   idTudu!: number;
-
-
-  @Input() todoId!: number;
-
-  todo = {} as Todo;
   todos!: Todo;
 
-    getCarById(todoId: number) {
-      this.todoService.getCarById(todoId).subscribe((todo: Todo) => {
-        this.todos = todo;
-        console.log(this.todos);
-      });
-    }
-
+   //ICONES -------------------------------------------
   faCheck = faCheck;
   faArrowUp = faArrowUp;
   faGripLines = faGripLines;
@@ -40,6 +46,20 @@ export class ShowTuduComponent {
   faPlus = faPlus;
   faArrowLeft = faArrowLeft;
 
+  //FUNCOES -------------------------------------------
+  getTodoById(todoId: number) {
+      this.todoService.getTodoById(todoId).subscribe((todo: Todo) => {
+        this.todos = todo;
+      });
+    }
+
+    updateTodo(todo: Todo) {
+      this.todoService.updateTodo(todo).subscribe(() => {
+        console.log('deu certo');
+      });
+    }
+
+
   addTarefa() {
     this.nInput.push(0);
   };
@@ -47,23 +67,14 @@ export class ShowTuduComponent {
   info() {
     this.isLogin = !this.isLogin;
   }
-  constructor(private router: Router,
-    private route: ActivatedRoute, private todoService: TodoService){
 
-} 
-ngOnInit() {
-this.route.queryParams.subscribe(
-(queryParams: any) => {
-this.idTudu = queryParams['pagina'];
-}
-)
-this.getCarById(this.idTudu);
-}
-
-backHome() {
+  backHome() {
   this.router.navigate(['/home']);
-}
+  }
 
-
-
+  checked(id: number){
+    this.todos.tarefas[id].do = !this.todos.tarefas[id].do;
+    console.log(id);
+    this.updateTodo(this.todos);
+  }
 }
